@@ -1,0 +1,109 @@
+:root {
+    --primary: #302e2e;
+    --secondary: #01B7F2;
+    --accent: #D9D9D9;
+}
+
+.bgDark {
+    background-color: var(--primary);
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-top: 100px;
+}
+
+.container .product_box {
+    padding: 15px;
+    border-radius: 16px;
+    background-color: var(--accent);
+    height: 23rem;
+    width: 17rem;
+    display: flex;
+    flex-direction: column;
+    color: var(--primary);
+}
+
+.container .product_box:hover {
+    box-shadow: 1px 1px 3px var(--primary);
+}
+
+.container .product_box img {
+    height: 70%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.container .product_box .description {
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    gap: 10px;
+    padding: 5px;
+}
+
+
+
+.product_box .description h2 {
+    margin-top: 5px;
+    position: relative;
+    font-size: 20px;
+}
+
+.product_box .description h2::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    background-color: var(--primary);
+    width: 100%;
+    bottom: -3px;
+    left: 0;
+}
+
+.container .product_box .description .price_cart {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product_box .description .price_cart p {
+    font-style: italic;
+}
+
+.product_box .description .price_cart i {
+    font-size: 25px;
+    margin-right: 5px;
+    transition: all 0.3s ease;
+}
+
+.product_box .description .price_cart i:hover {
+    color: var(--secondary);
+}
+
+.loadBtn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.loadBtn button {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: var(--primary);
+    font-weight: 600;
+    color: var(--accent);
+    transition: all 0.3s ease;
+}
+
+.loadBtn button:hover {
+    background-color: var(--secondary);
+}

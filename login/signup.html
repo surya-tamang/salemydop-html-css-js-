@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/login/login.css">
+    <title>SaleMyDop | Sign Up</title>
+</head>
+
+<body>
+
+    <header class="dark">
+        <div class="logo"><img src="/images/logo.png" alt="logo"></div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="">Categories</a></li>
+                <li><a href="/faq.html">FAQs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- [------------form section -----------------] -->
+    <div class="formWrapper">
+        <form action="" method="" onsubmit="return checkPwd()">
+            <h1>Register now</h1>
+
+            <div class="name">
+                <input type="text" id="fname" name="fname" placeholder="First name" required>
+                <input type="text" id="lname" name="lname" placeholder="Last name" required>
+            </div>
+
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="password" name="pwd" id="pwd" placeholder="Password" required>
+            <input type="password" name="re-pwd" id="re-pwd" placeholder="Re-password" required>
+            <span class="error" id="errorMsg"></span>
+            <span class="error" id="notEqualPwd"></span>
+            <button type="submit">Sign Up</button>
+
+            <p>Already have an account? <a href="login.html">Log-in now</a></p>
+        </form>
+    </div>
+
+    <!-- [------------footer section -----------------] -->
+
+    <footer>
+        <div class="footer_content">
+            <div class="footer-info">
+                <div class="logo">
+                    <img src="/images/logo.png" alt="">
+                </div>
+                <div class="info">
+                    <h4>Information</h4>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">FAQs</a></li>
+                    <li><a href="">Delivery coverage</a></li>
+                </div>
+                <div class="info">
+                    <h4>Policies</h4>
+                    <li><a href="">Data & security policy</a></li>
+                    <li><a href="">Product image policy</a></li>
+                    <li><a href="">Provacy policy</a></li>
+                    <li><a href="">Terms and condition</a></li>
+                </div>
+                <div class="info contact">
+                    <h4>Contact</h4>
+                    <li><a href=""><i class="fa-solid fa-phone"></i><span>01-4562455</span></a></li>
+                    <li><a href=""><i class="fa-solid fa-envelope"></i><span>salymydop@contact.com</span></a></li>
+                    <li><a href=""><i class="fa-solid fa-location-dot"></i><span>Chabahil, Kathmandu</span></a></li>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright &copy; 2024 | All rights reserved | SalyMyDop</p>
+                <div class="imgs">
+                    <a href=""><img src="images/" alt="esewa logo" /></a>
+                    <a href=""> <img src="images/" alt="khalti logo" /></a>
+                    <a href=""><img src="images/" alt="visa logo" /></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function checkPwd() {
+            let password = document.getElementById('pwd').value;
+            let confirmPassowrd = document.getElementById('re-pwd').value;
+
+            let pwdError = document.getElementById('notEqualPwd');
+
+            if (password === confirmPassowrd) {
+                return true;
+            } else {
+                pwdError.innerText = "Password doesn't match !!";
+                return false;
+            }
+        }
+    </script>
+    <script src="/login/emailValidate.js"></script>
+</body>
+
+</html>

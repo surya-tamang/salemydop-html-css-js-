@@ -115,15 +115,19 @@ document.addEventListener('DOMContentLoaded', function () {
         slidesPerView: 1,
         spaceBetween: 10,
       },
-      "@0.75": {
+      "@1.0": {
         slidesPerView: 2,
         spaceBetween: 20,
       },
-      "@1.00": {
+      "@1.6": {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      "@1.8": {
         slidesPerView: 3,
         spaceBetween: 40,
       },
-      "@1.50": {
+      "@1.9": {
         slidesPerView: 4,
         spaceBetween: 50,
       },

@@ -8,6 +8,7 @@ let validation = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9
 
 button.addEventListener('click', () => {
     if (email.value.match(validation)) {
+        errorMessage.innerHTML = "";
         return true;
     }
     else {

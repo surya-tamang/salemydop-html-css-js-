@@ -79,3 +79,31 @@ form span.error {
     color: rgb(141, 1, 1);
     font-size: 14px;
 }
+
+.api {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+}
+
+.api .link_social {
+    display: flex;
+    align-items: center;
+    background-color: var(--primary);
+    color: var(--accent);
+    padding: 10px 15px;
+    border-radius: 8px;
+    width: 50%;
+    cursor: pointer;
+}
+
+.api img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.google img {
+    margin-right: 15px;
+}

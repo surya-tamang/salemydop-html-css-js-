@@ -94,6 +94,7 @@
             let pwdError = document.getElementById('notEqualPwd');
 
             if (password === confirmPassowrd) {
+                pwdError.innerText = "";
                 return true;
             } else {
                 pwdError.innerText = "Password doesn't match !!";

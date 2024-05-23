@@ -401,6 +401,8 @@ footer .footer_content .footer-info {
   align-items: start;
   position: relative;
   width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 footer .footer_content .footer-info .logo img {
@@ -448,6 +450,8 @@ footer .footer_content .copyright {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 footer .footer_content .copyright .imgs {

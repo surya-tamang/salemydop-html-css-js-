@@ -71,18 +71,18 @@ document.addEventListener('DOMContentLoaded', function () {
                     <div class="description">
                         <h4>${slide.name}</h4>`;
 
-                        if (slide.discountPrice) {
-                          slidesHtml += `
+      if (slide.discountPrice) {
+        slidesHtml += `
                                   <div class="price">
                                       <p class="discount">${slide.discountPrice}</p>
                                       ${slide.originalPrice ? `<p class="original"><del>${slide.originalPrice}</del></p>` : ''}
                                   </div>`;
-                      } else if (slide.originalPrice) {
-                          slidesHtml += `
+      } else if (slide.originalPrice) {
+        slidesHtml += `
                                   <div class="price">
                                       <p class="original">${slide.originalPrice}</p>
                                   </div>`;
-                      }
+      }
 
       slidesHtml += `
                     </div>
@@ -135,3 +135,24 @@ document.addEventListener('DOMContentLoaded', function () {
     loop: true
   });
 });
+
+
+/************************************************
+***************** hamburger scripting *****************
+**************************************************/
+
+let openBtn = document.querySelector('#menu');
+let closeBtn = document.querySelector('#close');
+
+let navBar = document.querySelector('nav');
+
+openBtn.addEventListener('click', () => {
+  navBar.style.right = "0";
+  closeBtn.style.display = "block";
+  openBtn.style.display = "none"
+})
+closeBtn.addEventListener('click', () => {
+  navBar.style.right = "-100%";
+  closeBtn.style.display = "none";
+  openBtn.style.display = "block"
+})
